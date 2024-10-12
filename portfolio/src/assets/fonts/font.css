@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "medium";
+    src: url("./medium.ttf") format("woff");
+}
+
+@font-face {
+    font-family: "bold";
+    src: url("./bold.ttf") format("woff");
+}
+
+@font-face {
+    font-family: "ex_bold";
+    src: url("./ex_bold.ttf") format("woff");
+}
+
+@font-face {
+    font-family: "ubon";
+    src: url("./ubontu.ttf") format("woff");
+}
+
+@font-face {
+    font-family: "ubon_bold";
+    src: url("./ubontu_bold.ttf") format("woff");
+}
