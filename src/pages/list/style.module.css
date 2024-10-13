@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.swiperSlide {
+    background-color: white;
+    min-height: 300px;
+    width: 100vw;
+    height: 20vh;
+    border: 1px solid black;
+}
