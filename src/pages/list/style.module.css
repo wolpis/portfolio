@@ -6,9 +6,40 @@
 }
 
 .swiperSlide {
-    background-color: white;
     min-height: 300px;
     width: 100vw;
     height: 20vh;
-    border: 1px solid black;
+    border-radius: 0.8em;
+}
+
+
+.inner {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    height: 90%;
+    color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+.sub_text {
+    padding: 7px;
+    border-radius: 1.2em;
+}
+
+.icon {
+    font-size: 9em;
+    opacity: 0.4;
+    display: flex;
+    align-items: center;
+}
+
+.start {
+    opacity: 0
+}
+
+.end {
+    opacity: 1;
+    transition: opacity 0.5s;
 }

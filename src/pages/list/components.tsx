@@ -3,16 +3,48 @@ import { EffectCoverflow } from "swiper/modules";
 import 'swiper/css';
 import styles from './style.module.css';
 
-export const ListComponent = () => {
-    const ListDate = [
-        "Project",
-        "Career Feed",
-        "Specialty Skill",
-        "Education",
-        "Activity",
-        "Certificate"
-    ];
+import { FaGraduationCap } from "react-icons/fa6";
+import { GoProjectRoadmap } from "react-icons/go";
+import { AiFillPicture } from "react-icons/ai";
+import { SiEducative } from "react-icons/si";
+import { FaAward } from "react-icons/fa6";
+import { FaAddressCard } from "react-icons/fa";
 
+const ListData = [
+    {
+        title: ["Project", "프로젝트"],
+        color: ["#C07F65", "#865947"],
+        icon: <GoProjectRoadmap />
+    },
+    {
+        title: ["Career Feed", "활동 사진"],
+        color: ["#CFAF71", "#6B5B3B"],
+        icon: <AiFillPicture />
+    },
+    {
+        title: ["Specialty\nSkill", "보유 스킬"],
+        color: ["#7862CC", "#54448E"],
+        icon: <SiEducative />
+    },
+    {
+        title: ["Education", "교육 활동"],
+        color: ["#6A73CC", "#4A508E"],
+        icon: <FaGraduationCap />
+
+    },
+    {
+        title: ["Activity", "대외 활동"],
+        color: ["#8AD0B8", "#609180"],
+        icon: <FaAward />
+    },
+    {
+        title: ["Certificate", "자격증"],
+        color: ["#313131", "#222222"],
+        icon: <FaAddressCard />
+    }
+]
+
+export const ListComponent = () => {
     return (
         <div className={styles.container}>
             <Swiper
@@ -32,9 +64,17 @@ export const ListComponent = () => {
                 slidesPerView={3}
             >
                 {
-                    ListDate.map((item, i) => (
-                        <SwiperSlide key={i} className={styles.swiperSlide}>
-                            {item} {i}
+                    ListData.map((item, i) => (
+                        <SwiperSlide key={i} className={styles.swiperSlide} style={{ backgroundColor: item.color[0] }}>
+                            <div className={styles.inner}>
+                                <div style={{ position: "absolute" }}>
+                                    <span className={styles.sub_text} style={{ backgroundColor: item.color[1] }}>{item.title[1]}</span>
+                                    <h1 style={{ marginTop: "10px", whiteSpace: "pre-wrap", lineHeight: "1.3em" }}>{item.title[0]}</h1>
+                                </div>
+                                <div className={styles.icon} style={{ marginLeft: "auto" }}>
+                                    {item.icon}
+                                </div>
+                            </div>
                         </SwiperSlide>
                     ))
                 }
@@ -42,3 +82,23 @@ export const ListComponent = () => {
         </div>
     );
 };
+
+export const MobileListComponent = () => {
+    return (
+        <div style={{ display: "flex", flexDirection: "column", padding: "10px", alignItems: "" }}>
+            {
+                ListData.map((item, i) => (
+                    <div key={i} style={{ backgroundColor: item.color[0], color: "white", padding: "10px", display: "flex", alignItems: "center", borderRadius: "0.5em", marginBottom: "10px" }}>
+                        <div style={{ marginRight: "auto" }}>
+                            <span>{item.title[1]}</span>
+                            <h1>{item.title[0]}</h1>
+                        </div>
+                        <div style={{ fontSize: "4em", display: "flex", alignItems: "center" }}>
+                            {item.icon}
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+    )
+}
