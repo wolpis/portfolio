@@ -99,6 +99,7 @@ export const MobileListComponent = () => {
                     </div>
                 ))
             }
+            <p style={{ fontSize: "0.85em", textAlign: "center", color: "#A4A4A4" }}>PC로 접속하시면 인터랙티브 웹을 체험하실 수 있습니다.</p>
         </div>
     )
 }

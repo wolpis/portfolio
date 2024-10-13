@@ -1,0 +1,27 @@
+.banner {
+    background-color: #C07F65;
+    position: relative;
+    display: flex;
+    color: white;
+    padding: 10px;
+    align-items: center;
+    display: flex;
+    box-shadow: 1px 1px 10px #C07F65;
+}
+
+.banner>div>h1 {
+    white-space: pre-wrap;
+    line-height: 1.3em;
+    font-size: calc(3em + 4vw);
+    padding-left: 30px;
+    opacity: 0.9;
+}
+
+.banner>.icon {
+    font-size: calc(6em + 4vw);
+    opacity: 0.4;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}

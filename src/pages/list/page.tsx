@@ -6,15 +6,15 @@ import { isMobile } from 'react-device-detect';
 const ListPage = () => {
     const [fade, SetFade] = useState('');
 
-    // useEffect(() => {
-    //     setInterval(() => SetFade(style.end), 100)
-    //     return () => {
-    //         SetFade("");
-    //     };
-    // }, [])
+    useEffect(() => {
+        setInterval(() => SetFade(style.end), 100)
+        return () => {
+            SetFade("");
+        };
+    }, [])
 
     return (
-        <div className={" " + fade}>
+        <div className={style.start + " " + fade}>
             {
                 isMobile ? <MobileListComponent /> : <ListComponent />
             }
