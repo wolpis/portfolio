@@ -9,6 +9,7 @@ import { AiFillPicture } from "react-icons/ai";
 import { SiEducative } from "react-icons/si";
 import { FaAward } from "react-icons/fa6";
 import { FaAddressCard } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const ListData = [
     {
@@ -44,7 +45,9 @@ const ListData = [
     }
 ]
 
+
 export const ListComponent = () => {
+    const navi = useNavigate();
     return (
         <div className={styles.container}>
             <Swiper
@@ -65,7 +68,7 @@ export const ListComponent = () => {
             >
                 {
                     ListData.map((item, i) => (
-                        <SwiperSlide key={i} className={styles.swiperSlide} style={{ backgroundColor: item.color[0] }}>
+                        <SwiperSlide key={i} className={styles.swiperSlide} style={{ backgroundColor: item.color[0] }} onClick={() => navi(`/${item.title[0].toLocaleLowerCase()}`)}>
                             <div className={styles.inner}>
                                 <div style={{ position: "absolute" }}>
                                     <span className={styles.sub_text} style={{ backgroundColor: item.color[1] }}>{item.title[1]}</span>
@@ -84,11 +87,12 @@ export const ListComponent = () => {
 };
 
 export const MobileListComponent = () => {
+    const navi = useNavigate();
     return (
         <div style={{ display: "flex", flexDirection: "column", padding: "10px", alignItems: "" }}>
             {
                 ListData.map((item, i) => (
-                    <div key={i} style={{ backgroundColor: item.color[0], color: "white", padding: "10px", display: "flex", alignItems: "center", borderRadius: "0.5em", marginBottom: "10px" }}>
+                    <div onClick={() => navi(`/${item.title[0].toLocaleLowerCase()}`)} key={i} style={{ backgroundColor: item.color[0], color: "white", padding: "10px", display: "flex", alignItems: "center", borderRadius: "0.5em", marginBottom: "10px" }}>
                         <div style={{ marginRight: "auto" }}>
                             <span>{item.title[1]}</span>
                             <h1>{item.title[0]}</h1>
