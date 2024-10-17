@@ -30,6 +30,27 @@ const DummyData = [
                 end_date: "2024.08",
                 text: "영어듣기평가를 연습할 수 있는 웹사이트 입니다.\nWeb Audio API를 사용하여 현장감 있는 응시환경을 체험 가능합니다."
             },
+            {
+                title: "HackSeuol 2024",
+                sub_text: "Gourment",
+                start_date: "2024.08",
+                end_date: "2024.08",
+                text: "HackSeoul 2024 프로젝트\n외국인들도 쉽게 배달 서비스를 이용할 수 있게 제작한 웹 애플리케이션입니다."
+            },
+            {
+                title: "JUNCTION 2024",
+                sub_text: "ALL Blue",
+                start_date: "2024.08",
+                end_date: "2024.08",
+                text: "JUNCTION 2024 프로젝트\n사회 취준생을 도와줄 수 있는 미니 해커톤 서비스 입니다.\n실제 업무의 로직을 해커톤으로 구현하여, 보다 쉽게 직장에 적응할 수 있게 도움을 줍니다."
+            },
+            {
+                title: "개인",
+                sub_text: "OrangeStar",
+                start_date: "2024.08",
+                end_date: "2024.08",
+                text: "영어듣기평가를 연습할 수 있는 웹사이트 입니다.\nWeb Audio API를 사용하여 현장감 있는 응시환경을 체험 가능합니다."
+            }
         ]
     }
 ]

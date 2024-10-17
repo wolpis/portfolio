@@ -92,7 +92,7 @@ export const MobileListComponent = () => {
         <div style={{ display: "flex", flexDirection: "column", padding: "10px", alignItems: "" }}>
             {
                 ListData.map((item, i) => (
-                    <div onClick={() => navi(`/${item.title[0].toLocaleLowerCase()}`)} key={i} style={{ backgroundColor: item.color[0], color: "white", padding: "10px", display: "flex", alignItems: "center", borderRadius: "0.5em", marginBottom: "10px" }}>
+                    <div onClick={() => navi(`/${item.title[0].toLocaleLowerCase().replace(" ", "_")}`)} key={i} style={{ backgroundColor: item.color[0], color: "white", padding: "10px", display: "flex", alignItems: "center", borderRadius: "0.5em", marginBottom: "10px" }}>
                         <div style={{ marginRight: "auto" }}>
                             <span>{item.title[1]}</span>
                             <h1>{item.title[0]}</h1>
